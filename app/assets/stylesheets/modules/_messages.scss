@@ -109,10 +109,32 @@
     height: calc(100vh - 190px);
     width: 100%;
     background-color: #fafafa;
+    padding: 35px 0 0 40px;
+    &--msgbox {
+
+      &--name {
+        margin-bottom: 12px;
+        font-size: 16px;
+        color: #333333;
+      }
+      &--dates {
+        font-size: 12px;
+        color: #999999;
+      }
+      &--msg {
+        margin-bottom: 46px;
+        font-size: 14px;
+        color: #434a54;
+      }
+    }
   }
   &__bot {
     height: 90px;
     width: 100%;
     background-color: #d2d2d2;
+    form {
+      display: flex;
+    }
+
   }
 }

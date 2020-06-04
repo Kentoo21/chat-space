@@ -12,17 +12,26 @@
   .mainchat__mid
     .mainchat__mid--msgbox
       .mainchat__mid--msgbox--name
-        Kento 2020年06月03日 12時11分
+        Kento
+        %span.mainchat__mid--msgbox--dates
+          2020年06月03日 12時11分
       .mainchat__mid--msgbox--msg
         こんにちは！
     .mainchat__mid--msgbox
       .mainchat__mid--msgbox--name
-        Kento 2020年06月03日 22時11分
+        Kento
+        %span.mainchat__mid--msgbox--dates
+          2020年06月03日 22時11分
       .mainchat__mid--msgbox--msg
         おやすみ！
     .mainchat__mid--msgbox
       .mainchat__mid--msgbox--name
-        Kento 2020年06月04日 08時11分
+        Kento
+        %span.mainchat__mid--msgbox--dates
+          2020年06月03日 08時11分
       .mainchat__mid--msgbox--msg
         おはよう！
   .mainchat__bot
+    = form_with do |form|
+      = form.text_area :text, placeholder: "type a message"
+      = form.submit "Send"
