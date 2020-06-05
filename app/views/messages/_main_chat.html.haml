@@ -33,5 +33,9 @@
         おはよう！
   .mainchat__bot
     = form_with do |form|
-      = form.text_area :text, placeholder: "type a message"
-      = form.submit "Send"
+      .textarea
+        = form.text_area :text, placeholder: "type a message", class: "text"
+        %label{class: "image"}
+          = icon('fas', 'image')
+          %input{type: "file"}
+      = form.submit "Send", class: "send"

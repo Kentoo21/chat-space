@@ -133,8 +133,41 @@
     width: 100%;
     background-color: #d2d2d2;
     form {
+      height: 90px;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .textarea {
+        height: 50px;
+        width: 100%;
+        margin-left: 40px;
+        display: flex;
+        position: relative;
+        .text {
+          height: 50px;
+          width: 100%;
+          padding-left: 10px;
+          line-height: 50px;
+          border: none;
+        }
+        .image {
+          position: absolute;
+          right: 10px;
+          top: 15px;
+          input {
+            display: none;
+          }
+        }
+      }
+      .send {
+        height: 50px;
+        width: 120px;
+        margin: 0 40px 0 15px;
+        border: none;
+        background-color: #38aef0;
+        color: #fff;
+      }
     }
-
   }
 }
+
