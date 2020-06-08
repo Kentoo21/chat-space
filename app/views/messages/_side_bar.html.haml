@@ -2,11 +2,11 @@
   .sidebar__top
     .sidebar__top--userbox
       .sidebar__top--userbox--name
-        Kento
+        = current_user.name
       .sidebar__top--userbox--btns
-        = link_to "#", class: "sidebar__top--userbox--btns--btn" do
+        = link_to "#" , class: "sidebar__top--userbox--btns--btn" do
           = icon('far', 'edit')
-        = link_to "#", class: "sidebar__top--userbox--btns--btn" do
+        = link_to edit_user_path(current_user), class: "sidebar__top--userbox--btns--btn" do
           = icon('fas', 'cog')
   .sidebar__bot
     .sidebar__bot--groupbox
