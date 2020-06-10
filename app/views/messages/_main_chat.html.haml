@@ -16,10 +16,10 @@
     .mainchat__mid--msgbox
       = render @messages
   .mainchat__bot
-    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |form|
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .textarea
-        = form.text_area :text, placeholder: "type a message", class: "text"
-        %label{class: "image"}
-          = icon('fas', 'image')
-          = form.file_field :image, class: 'hidden'
-      = form.submit "Send", class: "send"
+        = f.text_field :text, class: 'text', placeholder: 'type a message'
+        = f.label :image, class: 'image' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'send'

@@ -48,17 +48,16 @@
     background-color: #2f3e51;
     font-weight: bold;
     .group {
-      height: 65px;
-      width: 100%;
+      padding: 20px 0 40px;
       &__link {
         color: #ffffff;
         text-decoration: none;
-      }
-      &__name {
-        padding: 20px 0 5px 0;
-      }
-      &__message {
-        padding-bottom: 40px;
+        &__name {
+          font-size: 15px;
+        }
+        &__message {
+          font-size: 11px;
+        }
       }
     }
   }
@@ -75,7 +74,6 @@
     justify-content: space-between;
     &--leftbox {
       height: 100px;
-      width: 100px;
       margin-left: 40px;
       &--name {
         margin: 35px 0 15px 0;
@@ -110,15 +108,17 @@
     background-color: #fafafa;
     padding: 35px 0 0 40px;
     &--msgbox {
-
-      &--name {
-        margin-bottom: 12px;
-        font-size: 16px;
-        color: #333333;
-      }
-      &--dates {
-        font-size: 12px;
-        color: #999999;
+      &--namendates {
+        display: flex;
+        &--name {
+          margin: 0 10px 12px 0;
+          font-size: 16px;
+          color: #333333;
+        }
+        &--dates {
+          font-size: 12px;
+          color: #999999;
+        }
       }
       &--msg {
         margin-bottom: 46px;
@@ -131,7 +131,7 @@
     height: 90px;
     width: 100%;
     background-color: #d2d2d2;
-    form {
+    .form {
       height: 90px;
       display: flex;
       justify-content: space-between;
@@ -170,3 +170,6 @@
   }
 }
 
+.field_with_errors {
+  width: 100%;
+}
