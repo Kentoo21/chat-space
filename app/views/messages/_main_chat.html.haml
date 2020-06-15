@@ -13,8 +13,7 @@
         .mainchat__top--rightbox--edit--box
           Edit
   .mainchat__mid
-    .mainchat__mid--msgbox
-      = render @messages
+    = render @messages
   .mainchat__bot
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .textarea
