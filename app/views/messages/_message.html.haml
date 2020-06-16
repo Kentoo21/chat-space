@@ -1,9 +1,10 @@
-.mainchat__mid--msgbox--namendates
-  .mainchat__mid--msgbox--namendates--name
-    = message.user.name
-  .mainchat__mid--msgbox--namendates--dates
-    = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-.mainchat__mid--msgbox--msg
-  - if message.text.present?
-    = message.text
-  = image_tag message.image.url, class: 'Message__image' if message.image.present?
+.mainchat__mid--msgbox
+  .mainchat__mid--msgbox--namendates
+    .mainchat__mid--msgbox--namendates--name
+      = message.user.name
+    .mainchat__mid--msgbox--namendates--dates
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .mainchat__mid--msgbox--msg
+    - if message.text.present?
+      = message.text
+    = image_tag message.image.url, class: 'Message__image' if message.image.present?
