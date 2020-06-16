@@ -1,6 +1,5 @@
 $(function(){
   function buildHTML(message){
-    console.log(message.image)
     if ( message.image ) {
       let html =
         `<div class="mainchat__mid--msgbox">
@@ -58,11 +57,12 @@ $(function(){
       $('.mainchat__mid').append(html);
       $('form')[0].reset();
       $('.mainchat__mid').animate({ scrollTop: $('.mainchat__mid')[0].scrollHeight});
-      $('.send').prop('disabled', '')
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-      $('.send').prop('disabled', '')
     });
+    .always(function(){
+      $('.send').prop('disabled', '')
+    })
   });
 });
