@@ -47,6 +47,7 @@
     padding: 0 20px;
     background-color: #2f3e51;
     font-weight: bold;
+    overflow: scroll;
     .group {
       padding: 20px 0 40px;
       &__link {
@@ -69,6 +70,7 @@
   &__top {
     height: 100px;
     width: 100%;
+    border: 1px solid #eeeeee;
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
